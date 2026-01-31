@@ -216,7 +216,7 @@ async def get_valid_access_token(username: str):
 
 # def convert_command_to_url(command):
 #     """
-#     Convert a command of the format !weave/!weavebot {pipeline_id} input1=input1, input2=input2
+#     Convert a command of the format !spin/!spinbot {pipeline_id} input1=input1, input2=input2
 #     to a URL format: http://127.0.0.1:8000/pipelines/{pipeline_id}?input1=input1&input2=input2
     
 #     Args:
@@ -225,7 +225,7 @@ async def get_valid_access_token(username: str):
 #     Returns:
 #         str: Formatted URL
 #     """
-#     # Extract the pipeline ID - handles both !weave and !weavebot
+#     # Extract the pipeline ID - handles both !spin and !spinbot
 #     pipeline_match = re.match(r'!weave(?:bot)?\s+(\S+)', command)
 #     if not pipeline_match:
 #         return "Invalid command: Could not find pipeline ID"

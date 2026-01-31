@@ -6,9 +6,8 @@ from models import Pipeline
 from bson import ObjectId
 
 load_dotenv()
-MONGODB_USERNAME = os.getenv("MONGODB_USERNAME")
-MONGODB_PASS = os.getenv("MONGODB_PASS")
-client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASS}@cluster0.dzidf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", server_api=ServerApi('1'))
+MONGODB_URI = os.getenv("MONGODB_URI")
+client = MongoClient(MONGODB_URI, server_api=ServerApi('1'))
 
 db = client.epic_db 
 pipelines_db = db["pipelines_db"]

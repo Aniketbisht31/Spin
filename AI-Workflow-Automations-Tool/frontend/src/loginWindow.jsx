@@ -267,7 +267,7 @@ export const LoginWindow = ({setSelectedOption}) => {
                             fontWeight: 700,
                             marginTop: "0vh",
                         }}>
-                        Welcome To Weavebot
+                        Welcome To Spinbot
                     </div>
                     <div
                         style={{

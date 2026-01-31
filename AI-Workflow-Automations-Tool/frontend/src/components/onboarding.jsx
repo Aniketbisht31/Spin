@@ -65,7 +65,7 @@ export default function Onboarding({ setOnboarding }) {
                             fontSize: "32px",
                             marginTop: "1rem",
                         }}>
-                        Welcome to Weavebot
+                        Welcome to Spinbot
                     </div>
                     <div style={{ marginLeft: "1.8rem", marginTop: "1vh" }}>
                         Start the quick tutorial — it hardly takes one minute!
@@ -93,7 +93,7 @@ export default function Onboarding({ setOnboarding }) {
                         }}>
                         Custom variables are vital for flexibility and
                         customization. Just surround any word with double curly
-                        braces and weavebot will replace it with the variable's
+                        braces and spinbot will replace it with the variable's
                         value!
                     </div>
                     {/* GIF */}
@@ -166,7 +166,7 @@ export default function Onboarding({ setOnboarding }) {
                             marginTop: "1vh",
                             fontSize: "14px",
                         }}>
-                        Weavebot is here to help you do more with less. But it
+                        Spinbot is here to help you do more with less. But it
                         is still in alpha stage. If you have any suggestions or
                         feedback, please let us know! We are committing to <a style={{textDecoration: 'underline', cursor: 'pointer', color: '#edb015'}} href="https://github.com/vibhor64/AI-Workflow-Automations-Tool" target="_blank">open source</a> and free software inititave.
                     </div>

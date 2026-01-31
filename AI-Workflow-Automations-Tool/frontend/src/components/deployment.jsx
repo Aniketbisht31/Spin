@@ -750,7 +750,7 @@ async fn main() {
                                             Discord Automation ✨
                                         </div>
 
-                                        To execute this pipeline through discord, use the following syntax in a discord channel where Weavebot is added:
+                                        To execute this pipeline through discord, use the following syntax in a discord channel where Spinbot is added:
                                         <pre
                                             style={{
                                                 background: "#d9d9d9",
@@ -889,7 +889,7 @@ async fn main() {
                                     Calling the API
                                 </div>
                                 <div style={{ marginBottom: "2vh" }}>
-                                    Calling Weavebot APIs are as simple as
+                                    Calling Spinbot APIs are as simple as
                                     calling any other generic API. I have
                                     provided code for the same in the code
                                     editor below.

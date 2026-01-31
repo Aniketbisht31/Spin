@@ -5,11 +5,108 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Root variables matching requested GitHub-style palette */
+:root {
+  --app-bg: #0D1117; /* app background */
+  --canvas-bg: #0D1117; /* canvas base */
+  --canvas-grid: rgba(22,27,34,0.6); /* #161B22 */
+  --surface: #161B22; /* node / card surface */
+  --surface-elevated: #1F2937; /* elevated */
+  --border: #30363D;
+  --text-primary: #E6EDF3;
+  --text-secondary: #8B949E;
+  --text-muted: #6E7681;
+  --accent: #2F81F7; /* GitHub blue */
+  --success: #3FB950;
+  --warning: #D29922;
+  --error: #F85149;
+  --shadow-subtle: 0 1px 0 rgba(2,6,23,0.6);
+  --shadow-medium: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+/* Dark mode class applied on body */
+body.dark-mode {
+  background: var(--app-bg);
+  color: var(--text-primary);
+}
+
+/* Canvas / flow area */
+.big-man {
+  background: linear-gradient(0deg, rgba(13,17,23,1) 0%, rgba(13,17,23,1) 100%);
+  background-color: var(--canvas-bg);
+}
+
+/* Background grid: subtle lines using pseudo-element */
+.big-man::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(22,27,34,0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22,27,34,0.14) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Smooth transitions for theme changes */
+*, html, body, .big-man, .react-flow, .react-flow__node {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+/* Surfaces and cards */
+.card, .panel, .modal, .react-flow__node {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-subtle);
+  border-radius: 8px;
+}
+.card.elevated, .panel.elevated {
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Node card hover and selected states */
+.react-flow__node { border-radius: 10px; }
+.react-flow__node:hover { box-shadow: 0 6px 18px rgba(11,15,22,0.6); transform: translateY(-1px); }
+.react-flow__node.selected { border: 1.5px solid var(--accent); box-shadow: 0 8px 24px rgba(47,129,247,0.12); }
+
+/* Top navbar (if exists) */
+.top-nav { position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--border); z-index: 50; }
+.top-nav .icon { color: var(--text-muted); transition: color 150ms ease; }
+.top-nav .icon:hover { color: var(--accent); }
+
+/* Inputs & dropdowns */
+input, textarea, select {
+  background: #0D1117;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+input::placeholder, textarea::placeholder { color: rgba(142,149,158,0.45); }
+input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 4px rgba(47,129,247,0.12); border-color: var(--accent); }
+
+/* Buttons */
+.btn-primary { background: var(--accent); color: var(--text-primary); border: 1px solid rgba(255,255,255,0.02); }
+.btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
+
+/* React Flow handle uses variables */
+.big-man .react-flow__handle { width: 7px; height: 7px; background-color: var(--surface); border: 2px solid var(--border); transition: all 0.2s; }
+
+/* Muted text */
+.muted { color: var(--text-muted); }
+
+/* Theme toggle */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: transparent; border: 1px solid rgba(255,255,255,0.03); color: var(--text-secondary); }
+.theme-toggle svg { transition: transform 240ms ease, opacity 180ms ease, fill 180ms ease; }
+
+
 .big-man .react-flow__handle {
   width: 7px;
   height: 7px;
-  background-color: white;
-  border: 2px solid #ccc;
+  background-color: var(--handle-bg);
+  border: 2px solid var(--handle-border);
   transition: all 0.2s;
 }
 

@@ -804,7 +804,7 @@ const templateNodes = [
             },
             "data": {
               "name": "GDocs",
-              "desc": "Create a doc (or database inside Weavebot) and store all your previously sent emails there.",
+              "desc": "Create a doc (or database inside Spinbot) and store all your previously sent emails there.",
               "Nodestate": [
                 "Read Doc",
                 "Create Doc"

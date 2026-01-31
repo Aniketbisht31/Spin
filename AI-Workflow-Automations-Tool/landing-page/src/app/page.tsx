@@ -47,7 +47,7 @@ export default function Home() {
             </div>
             {/* <div className="absolute top-6 left-8 z-500 flex flex-row">
                 <Image
-                    src="/weavebot-alpha.png"
+                    src="/spinbot-alpha.png"
                     alt="logo"
                     width="40"
                     height="40"
@@ -110,7 +110,7 @@ export default function Home() {
                         animationStyle="from-center"
                         // videoSrc="/hero-video.mp4"
                         videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-                        thumbnailSrc="/weavebot-showcase.png"
+                        thumbnailSrc="/spinbot-showcase.png"
                         thumbnailAlt="Showcase Video"
                         className="w-[80vw]"
                     />

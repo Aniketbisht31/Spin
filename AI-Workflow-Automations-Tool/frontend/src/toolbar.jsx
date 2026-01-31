@@ -24,7 +24,7 @@ export const PipelineToolbar = () => {
         //     </div>
         // </div>
 
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             {/* Category Selector */}
             <div
                 style={{
@@ -105,6 +105,30 @@ export const PipelineToolbar = () => {
                             name={config.data.name}
                         />
                     ))}
+            </div>
+
+            {/* Theme toggle */}
+            <div style={{ marginRight: 12, display: 'flex', gap: 8, alignItems: 'center' }}>
+                <button
+                    className="theme-toggle"
+                    title="Toggle theme"
+                    onClick={() => {
+                        try {
+                            const isDark = document.body.classList.toggle('night-mode');
+                            if (isDark) {
+                                localStorage.setItem('theme', 'dark');
+                                document.documentElement.classList.remove('light-mode');
+                            } else {
+                                localStorage.setItem('theme', 'light');
+                                document.documentElement.classList.add('light-mode');
+                            }
+                        } catch (e) {}
+                    }}>
+                    {/* moon / sun simple svg */}
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor" />
+                    </svg>
+                </button>
             </div>
         </div>
     );

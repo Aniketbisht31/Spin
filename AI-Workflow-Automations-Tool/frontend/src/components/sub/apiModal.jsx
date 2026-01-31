@@ -367,7 +367,7 @@ export const ApiModal = ({ pipe_id, setApiPage }) => {
           Calling the API
         </div>
         <div style={{ marginBottom: "2vh" }}>
-          Calling Weavebot APIs are as simple as calling any other generic API.
+          Calling Spinbot APIs are as simple as calling any other generic API.
           I have provided code for the same in the code editor below.
         </div>
         <select
